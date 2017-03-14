@@ -19,6 +19,7 @@ MoteurB::MoteurB(void)
 	TCCR2A = 0xa1; // TOP 0xff, phase correct, OC2A et OC2B pins clr upcount
 	TCCR2B = 0x02; // no noise canceler, TOP 0xff, phase correct, clk/8;
 	DDRD = 0b11111111; // PORT D en mode sortie
+	PORTD = 0b00000000; // initialisation PORT D
 }
 MoteurB::~MoteurB(void)
 {
