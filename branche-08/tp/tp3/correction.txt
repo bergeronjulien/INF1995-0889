@@ -1,0 +1,53 @@
+Polytechnique Montréal
+
+Département de génie informatique et génie logiciel
+
+INF1995: Projet initial en ingénierie informatique
+         et travail en équipe
+
+Grille de correction des programmes:
+
+Identification:
+  Travail Pratique # : 3
+  Section #  : 01
+  Équipe #   : 08
+  Correcteur : Andre Phu-Van Nguyen <andre-phu-van.nguyen@polymtl.ca>
+  Commit hash: 5784fb4b5fab0c65f7f0eb0059fe219d381e0145
+
+
+Lisibilité:  /5
+  En-têtes en début de programme et de fonctions   (1 point) : 0
+  Identificateurs significatifs (variables, etc.)  (1 point) : 1
+  Commentaires aux endroits stratégiques           (1 point) : 0.5
+  Indentation et facilité de lecture               (1 point) : 0.5
+  Broches, ressources matérielles bien identifiées (1 point) : 0.5
+
+Modularité et comprehension:   /5
+  Les fonctions sont assez courtes, bien
+        établies et avec de bons paramètres        (1 point) : 0
+  Le code reflète une bonne compréhension
+        des concepts de base                       (2 points): 2
+  Le code montre que la solution proposée
+        permet de bien résoudre le problème        (2 points): 2
+
+Fonctionnalité:   /10
+  Soumission réussie sous git (bon endroit,
+        sans fichiers inutiles)                    (3 points): 3
+  Compilation sans "warnings" et sans erreurs      (2 point) : 2
+  Fonctionnement correct (évalué en "boite noire") (5 points): 5
+
+
+Total:     15.5/20
+
+
+Commentaires du correcteur:
+- Enlevez l'entête à Matthew; faites des fonctions pour modulariser votre code. -1
+- Mettez des commentaires dans votre code. e.g. il aurait été utile
+  d'expliquer le but de la variable etat_bool. -0.5
+- Votre pb2 est beaucoup trop long, il devrait pouvoir être la moitiée de sa
+  taille actuelle. -1
+- pb2: Vous n'avez pas d'antirebond sur la lecture de votre bouton, ce faisant,
+  il est possible de sauter à l'était E4 à partir de INIT avec une seule pesée
+  du bouton. -1
+- Attention à l'indentation. -0.5
+- Identifiez à quel bits et à quel port vous branchez la DEL. -0.5
