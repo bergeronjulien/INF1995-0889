@@ -1,16 +1,12 @@
 /*
- * Travail pratique 5
- * Section 01
- * Equipe 89
- * Date: 12 mars 2017
- * Nom du programme: tp5pb3
- * Auteurs: Guillaume Renaud
+ * code pour tester la librairie pris du tp5
  */
 #define F_CPU			8000000UL
 #include <avr/io.h>
 #include <util/delay_basic.h>
 #include <avr/interrupt.h>
 #include "../include/pwm.h"
+
 void init(void)
 {
 	DDRA = 0xff; // PORT A est en mode sortie
@@ -19,6 +15,7 @@ void init(void)
 	DDRD = 0xff; // PORT D est en mode sortie
 	PORTD = 0x00;
 }
+
 /* programme principal */
 int main(void)
 {
