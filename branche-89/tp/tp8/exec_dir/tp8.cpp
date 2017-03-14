@@ -18,15 +18,16 @@ void init(void)
 	DDRA = 0xff; // PORT A est en mode sortie
 	DDRB = 0xff; // PORT B est en mode sortie
 	DDRC = 0xff; // PORT C est en mode sortie
+	PORTC = 0x00; // initialisation du PORT C
 }
 
 /* programme principal */
 int main(void)
 {
 	init();
+	Del delLibre;
 	MoteurA moteurDroit;
 	Timer16 minuterie;
-	Del delLibre;
 	uint8_t i = 0;
 	moteurDroit.stop();
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s

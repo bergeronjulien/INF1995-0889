@@ -14,7 +14,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 #ifndef DEL_H
 #define DEL_H
-#include <avr/io.h>
 class Del
 {
 	private:
@@ -24,5 +23,5 @@ class Del
 		void rouge(void);
 		void vert(void);
 		void off(void);
-}
+};
 #endif // DEL_H
