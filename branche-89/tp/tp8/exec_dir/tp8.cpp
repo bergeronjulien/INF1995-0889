@@ -6,7 +6,12 @@
 #include <util/delay_basic.h>
 #include <avr/interrupt.h>
 #include "../include/moteurA.h"
-
+#include "../include/timer16.h"
+volatile uint8_t minuterieExpiree = 0x00;
+ISR(TIMER1_COMPA_vect)
+{
+	minuterieExpiree = 0x01;
+}
 void init(void)
 {
 	DDRA = 0xff; // PORT A est en mode sortie
@@ -19,6 +24,7 @@ int main(void)
 {
 	init();
 	MoteurA moteurDroit;
+	Timer16 minuterie;
 	uint8_t i = 0;
 	moteurDroit.stop();
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
@@ -35,5 +41,12 @@ int main(void)
 	moteurDroit.fwd(0xff);
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
 		_delay_loop_2(40000); // 20ms
+	minuterie.mode(2);
+	minuterie.setOCR1A(0x8000);
+	minuterie.setclk(5);
+	while(!minuterieExpiree)
+	{
+		PORTC = 0x02;
+	}
 	return 0;
 }

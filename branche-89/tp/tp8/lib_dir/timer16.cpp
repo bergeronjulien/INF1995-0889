@@ -56,7 +56,7 @@ void Timer16::setmode(uint8_t mode)
 			OCR1A = 0xffff; // valeur max pour initialiser par prudence
 			sei();
 			break;
-		case 3: // mode CTC. TOP = ICR1
+		case 3: // mode CTC, TOP = ICR1
 			/* pour etre en mode CTC avec TOP = ICR1, les bits 0 et 1 du TCCR1A
 			   (WGM11, WGM10, page 130) doivent etre a zero chacun. Les bits 3 
 			   et 4 du TCCR1B (WGM13, WGM12) doivent etre a 1 chacun */
@@ -113,7 +113,7 @@ void Timer16::setclk(uint8_t clk)
 				TCCR1B ^= 0b00000010);
 			TCCR1B |= 0b00000100;
 			break;
-		case 5: // horloge/1014
+		case 5: // horloge/1024
 			if(TCCR1B & 0b00000010)
 				TCCR1B ^= 0b00000010);
 			TCCR1B |= 0b00000101;
