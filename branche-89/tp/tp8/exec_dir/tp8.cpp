@@ -41,7 +41,7 @@ int main(void)
 	moteurDroit.fwd(0xff);
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
 		_delay_loop_2(40000); // 20ms
-	minuterie.mode(2);
+	minuterie.setmode(2);
 	minuterie.setOCR1A(0x8000);
 	minuterie.setclk(5);
 	while(!minuterieExpiree)

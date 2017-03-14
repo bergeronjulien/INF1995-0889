@@ -3,8 +3,8 @@
 #include <avr/io.h>
 class Timer16
 {
-	public:
 	private:
+	public:
 		Timer16(void);
 		~Timer16(void);
 		void setmode(uint8_t);
@@ -17,4 +17,4 @@ class Timer16
 		void allowAllInt(void);
 		void stopAllInt(void);
 };
-#endif TIMER_H
+#endif // TIMER_H
