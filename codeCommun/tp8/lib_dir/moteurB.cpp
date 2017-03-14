@@ -37,7 +37,7 @@ void MoteurB::fwd(uint8_t speed)
 }
 void MoteurB::rev(uint8_t speed)
 {
-	PORTD = 0b00010000; // change la direction pour marche arriere
+	PORTD |= 0b00010000; // change la direction pour marche arriere
 	OCR2B = speed;
 }
 void MoteurB::stop(void)
