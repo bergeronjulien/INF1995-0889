@@ -4,8 +4,7 @@
 class MoteurA
 {
 	private:
-		TCCR2A;
-		TCCR2B;
+		
 	public:
 		MoteurA(void);
 		~MoteurA(void);

@@ -9,7 +9,7 @@ MoteurA::MoteurA(void)
 }
 MoteurA::~MoteurA(void)
 {
-	
+	PORTC = 0b00000001;
 }
 void MoteurA::fwd(uint8_t speed)
 {

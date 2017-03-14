@@ -1,4 +1,4 @@
-#include "pwm.h"
+#include "../include/pwm.h"
 void pwmA(uint8_t duty)
 {
 	OCR2A = duty;

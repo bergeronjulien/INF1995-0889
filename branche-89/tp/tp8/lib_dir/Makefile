@@ -17,7 +17,7 @@
 ################### Definition des variables du make local ####################
 
 # Fichiers sources
-SRC=pwm.cpp
+SRC=moteurA.cpp
 
 # Nom de la librairie
 PROJECTNAME=libinf1995

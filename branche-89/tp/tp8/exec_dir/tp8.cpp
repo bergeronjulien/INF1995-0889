@@ -18,15 +18,15 @@ void init(void)
 int main(void)
 {
 	init();
-	MoteurA moteurDroit();
+	MoteurA moteurDroit;
 	uint8_t i = 0;
-	moteurDroit.stop;
+	moteurDroit.stop();
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
 		_delay_loop_2(40000); // 20ms
-	moteurDroit.fwd(0x40);
+	moteurDroit.rev(0x40);
 	for(; i > 0x00; i--) // 100 iterations X 20ms = 2s
 		_delay_loop_2(40000); // 20ms
-	moteurDroit.fwd(0x80);
+	moteurDroit.rev(0x80);
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
 		_delay_loop_2(40000); // 20ms
 	moteurDroit.fwd(0xc0);
