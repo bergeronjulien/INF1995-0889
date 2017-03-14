@@ -1,5 +1,5 @@
 /*
- * code pour tester la librairie prise du tp5
+ * Code pour tester les makefiles et la librairie
  */
 #define F_CPU			8000000UL
 #include <avr/io.h>
@@ -7,6 +7,7 @@
 #include <avr/interrupt.h>
 #include "../include/moteurA.h"
 #include "../include/timer16.h"
+#include "../include/del.h"
 volatile uint8_t minuterieExpiree = 0x00;
 ISR(TIMER1_COMPA_vect)
 {
@@ -25,6 +26,7 @@ int main(void)
 	init();
 	MoteurA moteurDroit;
 	Timer16 minuterie;
+	Del delLibre;
 	uint8_t i = 0;
 	moteurDroit.stop();
 	for(; i < 0x64; i++) // 100 iterations X 20ms = 2s
@@ -46,7 +48,11 @@ int main(void)
 	minuterie.setclk(5);
 	while(!minuterieExpiree)
 	{
-		PORTC = 0x02;
+		delLibre.vert();
 	}
+	delLibre.rouge();
+	for(; i > 0x00; i--) // 100 iterations X 20ms = 2s
+		_delay_loop_2(40000); // 20ms
+	delLibre.off();
 	return 0;
 }
