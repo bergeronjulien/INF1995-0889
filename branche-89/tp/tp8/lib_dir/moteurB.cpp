@@ -22,7 +22,11 @@ MoteurB::MoteurB(void)
 }
 MoteurB::~MoteurB(void)
 {
-	PORTC = 0b00000001;
+	/* le destructeur deconnecte OC2A et OC2B des broches 8 et 7 et coupe
+	   l'horloge du compteur 2. Attention! Le destructeur eteint le moteur
+	   A sans toutefois le detruire */
+	TCCR2A = 0b00000000;
+	TCCR2B = 0b00000000;
 }
 void MoteurB::fwd(uint8_t speed)
 {
