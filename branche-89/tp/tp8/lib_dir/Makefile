@@ -17,7 +17,7 @@
 ################### Definition des variables du make local ####################
 
 # Fichiers sources
-SRC=moteurA.cpp
+SRC=moteurA.cpp moteurB.cpp can.cpp
 
 # Nom de la librairie
 PROJECTNAME=libinf1995
