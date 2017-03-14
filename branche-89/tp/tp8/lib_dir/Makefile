@@ -1,34 +1,41 @@
-#############################################
-###  Makefile de la librairie écrit par:  ###
-###           Guillaume Renaud            ###
-###         Loic Bellmare-Alford          ###
-###           Julien Bergeron             ###
-###         Yann-Joel D. Tessier          ###
-###                                       ###
-###           Équipe 08-89                ###
-###          INF1995 - 2017               ###
-#############################################
+########               Makefile de la librairie in-house               ########
+#####                                                                     #####
+#####                    Makefile produit et ecrit par                    #####
+#####                          Guillaume Renaud                           #####
+#####                        Loic Bellmare-Alford                         #####
+#####                           Julien Bergeron                           #####
+#####                        Yann-Joel D. Tessier                         #####
+#####                                                                     #####
+#####                            Equipe 08-89                             #####
+#####                           INF1995 - H2017                           #####
+#####                                                                     #####
+#####                 Makefile inspire de Maxime Perusse                  #####
+#####                  https://github.com/maperr/inf1995                  #####
+#####                                                                     #####
+###############################################################################
 
-#Les fichiers contenant les fonctionnalités
-CPP=pwm.cpp
+################### Definition des variables du make local ####################
 
-#Le nom de la librairie
-PROJECTNAME=lib89
+# Fichiers sources
+SRC=pwm.cpp
 
-#L'acces au dossier include contenant les fichiers .h
+# Nom de la librairie
+PROJECTNAME=libinf1995
+
+# Acces au dossier include contenant les fichiers .h
 INC=-I ../include
 
-#Ligne de commande pour la creation de l'archive
-AR=avr-ar crs
+# Flags pour compilateur d'archive AVR
+AFLAGS=crs
 
-#La cible
+# Compilateur d'archive AVR
+AR=avr-ar
+
+# Cible de compilation
 TRG=$(PROJECTNAME).a
 
-#La commande specifique pour creer la librairie
-TRG_CMD=$(AR) $(TRG) $(OBJDEPS)
+# Commande specifique pour creer la librairie
+TRG_CMD=$(AR) $(AFLAGS) $(TRG) $(OBJDEPS)
 
-#
-C=-c
-
-#L
+# Appel au makefile commun
 -include ../Makefile.common
