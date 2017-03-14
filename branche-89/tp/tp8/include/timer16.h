@@ -1,3 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Classe Timer16                                                            //
+//                                                                           //
+// Description: Cette classe permet de manipuler le compteur 1 de 16 bits du //
+//              ATMega324PA.                                                 //
+//                                                                           //
+// Librairie:   inf1995                                                      //
+// Auteur:      Guillaume Renaud, B.A.A.                                     //
+// Equipe:      08-89                                                        //
+// Cours:       INF1995                                                      //
+// Date:        14 mars 2017                                                 //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
 #ifndef TIMER16_H
 #define TIMER16_H
 #include <avr/io.h>
