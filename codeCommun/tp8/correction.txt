@@ -1,0 +1,37 @@
+Polytechnique Montréal
+
+Département de génie informatique et génie logiciel
+
+INF1995: Projet initial en ingénierie informatique
+         et travail en équipe
+
+Grille de correction des programmes:
+
+Identification:
+  Travail Pratique # : 8
+  Section #  : 01
+  équipe #   : 0889
+  Correcteur : André Phu-Van Nguyen <andre-phu-van.nguyen@polymtl.ca>
+
+
+Qualité et choix des portions de code                         (5 points): 3
+Qualité des modifications aux Makefiles                       (5 points): 4
+
+Rapport
+  Explications cohérentes par rapport au code                 (2 points): 2
+  Explications cohérentes par rapport aux Makefiles modifiés  (2 points): 2
+  Explications claires avec un bon niveau de détails          (2 points): 1.5
+  Bon français                                                (1 points): 1
+
+Bonne soumission de l'ensemble du code (compilation sans
+erreurs, …) et du rapport selon le format demandé             (3 points): 3
+
+Total:     16.5/20
+
+Commentaires du correcteur:
+- Besoin de plus de détails dans le rapport. (-0.5)
+- UART, Int externes, Mémoire? (-2)
+- Votre makefile exec_dir n'inclut pas bien le dossier include. La variable INCL
+  fini par être vide parce que la variable INC n'existe pas dans ce context.
+  C'est pourquoi dans votre code vous avez des inclusions relatives
+  e.g. "../include/..." (-1)
